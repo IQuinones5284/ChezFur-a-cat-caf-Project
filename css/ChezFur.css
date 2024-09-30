@@ -15,3 +15,24 @@ main {
     }
 
 }
+/* this is the new code added for formatting the header with the logos */
+header {
+    background-image: url('../images/LogoSmall.png');
+    min-height: 50px;
+    background-position: right top; 
+    background-repeat: no-repeat; 
+}
+/* defines rules for large screens */
+@media (min-width: 769px) {
+    header {
+        background-image: url('../images/LogoLarge.png'); 
+        min-height: 100px; 
+    }
+}
+/* adds rules for the hero images of each page */
+.hero-image {
+    width: 100%;          
+    height: auto;        
+    max-width: 100%;     
+    display: block; 
+}      
