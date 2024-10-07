@@ -13,17 +13,34 @@
             <h1>Chez Fur</h1>
             <h2>By Isaiah Quinones</h2>
         </header>
-        <nav> <a href="../index.html"> Main</a> &nbsp; <a href="./menu.html">Menu</a> &nbsp;
-        <a href="./hosts.html"> Your Hosts</a> &nbsp; <a href="./contact.html"> Contact</a>
+        <nav class="nav-links"> 
+            <a href="../index.html"> Main</a> &nbsp;
+            <a href="./menu.html">Menu</a> &nbsp;
+            <a href="./hosts.html"> Your Hosts</a> &nbsp;
+            <a href="./contact.html">Contact</a>
         </nav>
         &nbsp;
         <main>
              <!-- Hero Image 3 -->
-             <img src="../images/HostCat.jpg" alt="A orange cat on a table with a tie" class="hero-image">
-            <h1>This is the hosts page</h1>
-            <p>body 1</p>
-            <p>body 2</p>
-            <h3>next header</h3>
+             <img class="hero-image" src="../images/HostCat.jpg" alt="A orange cat on a table with a tie" class="hero-image">
+            <h1>Our hosts</h1>
+            <!-- Container for cat images and their captions -->
+            <div class="cat-gallery">
+                <figure>
+                     <!-- Cat image with class 'cat-image' for specific styling -->
+                    <img class=cat-image src="../images/Host1.jpg" alt="Fluffy the Tabby">
+                    <figcaption>Fluffy</figcaption>
+                </figure>
+                <figure>
+                    <img class="cat-image" src="../images/Host2.jpg" alt="Shadow the Black Cat">
+                    <figcaption>Shadow</figcaption>
+                </figure>
+                <figure>
+                    <img class="cat-image" src="../images/Host3.jpg" alt="Whiskers the White Cat">
+                    <figcaption>Whiskers</figcaption>
+                </figure>
+            </div>
+
             <!-- sponsor page with image link -->
             <a href="https://thecatconnection.org/"  target="_blank">
                 <img src="../images/sponsorLogo.jpg" alt="Our Sponsors" width="100">

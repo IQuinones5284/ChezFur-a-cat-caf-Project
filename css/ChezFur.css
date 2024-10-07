@@ -4,7 +4,7 @@ body {
     font-family: sans-serif;
   }
 main {
-    background-color: saddlebrown;
+    background-color: #145;
     color: gainsboro;
 }
 @media screen and (min-width: 750px){
@@ -58,7 +58,7 @@ aside {
  * Light Blue (#A8DADC) - background for the body, soft color and provided a good contrast.
  * Coral (#E63946) - vibrant header color to catch attention.
  * Warm Beige (#F1FAEE) - used for text on darker backgrounds to ensure readability.
- *
+ *#145 was added to change the background color for the main 
  * Contrast Ratios:
  * - Dark Blue on Light Blue: 5.68:1 (Excellent)
  * - Warm Beige on Coral: 4.79:1 (Good)
@@ -71,13 +71,87 @@ aside {
  }
  /* Style list items */
  li {
-    font-size: 1.25em; /* Makes list items larger */
+    font-size: 1.25em; 
 }
 /* Style description terms and descriptions */
 dt {
-    font-weight: bold; /* Makes description terms bold */
+    font-weight: bold; 
 }
 
 dd {
-    font-style: italic; /* Makes descriptions italic */
+    font-style: italic; 
+}
+/* Container that holds all the cat images and captions mainly for the hosts page */
+.cat-gallery {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    background-color: #da9655; /* Set the background color */
+    width: 90%; /* Set the width to 90% */
+    margin: 0 auto; /* Center the section */
+    border-radius: 10px; /* Add 10px border-radius */
+    padding: 20px;
+}
+/* Remove default margin from the <figure> element */
+figure {
+    margin: 0;
+}
+/* styles items in the cat-image tag for small screens */
+.cat-image {
+    border-radius: 50%; 
+    object-fit: cover; 
+    width: 80px; 
+    height: 80px; 
+}
+/* Bold styling for the caption below each image */
+figcaption {
+    font-weight: bold;
+    margin-top: 8px; 
+}
+/* defines rules for the cat images on larger screens for the hosts page */
+@media screen and (min-width: 750px) {
+    .cat-image {
+        width: 180px; 
+        height: 180px; 
+    }
+}
+.menu-heading-1 {
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+}
+/* Styling to make the allergy information stand out */
+.allergy-info p {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #e74c3c;
+    margin-top: 10px;
+}
+/* Styling for the menu section */
+.menu-section {
+    width: 80%; 
+    margin: 0 auto; 
+    background-color: #B79F7C; 
+    padding: 20px;
+    border-radius: 10px; 
+}
+/* Basic styling for navigation links */
+.nav-links a {
+    color: #222c85;
+    padding: 10px;
+}
+/* Hover state */
+.nav-links a:hover {
+    color: #e74c3c; 
+    font-size: 2.0em;
+}
+
+/* Visited links */
+.nav-links a:visited {
+    color: #9b59b6; 
+}
+
+/* Active link (when selected) */
+.nav-links a:active {
+    color: #2ecc71; 
 }
