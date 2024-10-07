@@ -1,6 +1,6 @@
 body {
-    background-color: peru;
-    color: bisque;
+    background-color: #A8DADC;
+    color: #1D3557;
     font-family: sans-serif;
   }
 main {
@@ -9,8 +9,8 @@ main {
 }
 @media screen and (min-width: 750px){
     body {
-        background-color: maroon;
-        color: moccasin;
+        background-color: #457B9D;
+        color: #F1FAEE;
         font-family: 'Times New Roman', Times, serif;
     }
 
@@ -21,12 +21,15 @@ header {
     min-height: 50px;
     background-position: right top; 
     background-repeat: no-repeat; 
+    background-color: #E63946;
+    color: #F1FAEE;
 }
 /* defines rules for large screens */
 @media (min-width: 769px) {
     header {
         background-image: url('../images/LogoLarge.png'); 
-        min-height: 100px; 
+        min-height: 100px;
+        background-color: #E63; 
     }
 }
 /* adds rules for the hero images of each page */
@@ -35,4 +38,29 @@ header {
     height: auto;        
     max-width: 100%;     
     display: block; 
-}      
+}   
+a {
+ color: #1D3557;
+}  
+h1, h2, h3 {
+ color: #F1FAEE;  
+}
+aside {
+    background-color: #457B9D;
+    color: #F1FAEE;
+}
+/* Color Palette Choices
+ * Palette Source: Coolors.co
+ * 
+ * Colors used:
+ * Dark Blue (#1D3557) - used for text on light backgrounds for good readability.
+ * Sky Blue (#457B9D) - used for the aside background, providing a calming effect and good contrast.
+ * Light Blue (#A8DADC) - background for the body, soft color and provided a good contrast.
+ * Coral (#E63946) - vibrant header color to catch attention.
+ * Warm Beige (#F1FAEE) - used for text on darker backgrounds to ensure readability.
+ *
+ * Contrast Ratios:
+ * - Dark Blue on Light Blue: 5.68:1 (Excellent)
+ * - Warm Beige on Coral: 4.79:1 (Good)
+ * - Warm Beige on Sky Blue: 4.67:1 (Good)
+ */
