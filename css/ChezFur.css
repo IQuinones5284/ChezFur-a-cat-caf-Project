@@ -139,6 +139,7 @@ figcaption {
 .nav-links a {
     color: #222c85;
     padding: 10px;
+    font-size: 1.5em;
 }
 /* Hover state */
 .nav-links a:hover {
