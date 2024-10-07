@@ -35,7 +35,7 @@ header {
 /* adds rules for the hero images of each page */
 .hero-image {
     width: 100%;          
-    height: auto;        
+    height: auto;     
     max-width: 100%;     
     display: block; 
 }   
@@ -54,7 +54,7 @@ aside {
  * 
  * Colors used:
  * Dark Blue (#1D3557) - used for text on light backgrounds for good readability.
- * Sky Blue (#457B9D) - used for the aside background, providing a calming effect and good contrast.
+ * Sky Blue (#457B9D) - used for the aside background providing good contrast and one of my favorite colors.
  * Light Blue (#A8DADC) - background for the body, soft color and provided a good contrast.
  * Coral (#E63946) - vibrant header color to catch attention.
  * Warm Beige (#F1FAEE) - used for text on darker backgrounds to ensure readability.
@@ -64,3 +64,20 @@ aside {
  * - Warm Beige on Coral: 4.79:1 (Good)
  * - Warm Beige on Sky Blue: 4.67:1 (Good)
  */
+ /* Remove bullets from the unordered list */
+ ul {
+    list-style-type: none;
+    padding-left: 0;
+ }
+ /* Style list items */
+ li {
+    font-size: 1.25em; /* Makes list items larger */
+}
+/* Style description terms and descriptions */
+dt {
+    font-weight: bold; /* Makes description terms bold */
+}
+
+dd {
+    font-style: italic; /* Makes descriptions italic */
+}
