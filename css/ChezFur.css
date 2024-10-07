@@ -92,6 +92,7 @@ dd {
     margin: 0 auto; /* Center the section */
     border-radius: 10px; /* Add 10px border-radius */
     padding: 20px;
+    text-align:center
 }
 /* Remove default margin from the <figure> element */
 figure {
