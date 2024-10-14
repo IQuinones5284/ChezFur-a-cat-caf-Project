@@ -132,7 +132,7 @@ figcaption {
 /* Styling for the menu section */
 .menu-section {
     width: 80%; 
-    margin: 0 auto; 
+    margin: auto; 
     background-color: #B79F7C; 
     padding: 20px;
     border-radius: 10px; 
@@ -150,7 +150,7 @@ figcaption {
     margin: 0;
     display: flex; /* Flexbox for horizontal navigation */
     justify-content: space-between; /* Space links evenly */
-    align-items: center; /* Center items vertically */
+    align-items: center; 
 }
 
 .nav-links li {
@@ -160,14 +160,14 @@ figcaption {
 
 .nav-links a {
     color: #ffffff; 
-    padding: 10px 0; /* Button-like padding (top/bottom only for vertical centering) */
-    font-size: 1.2em; /* Base font size */
+    padding: 10px 0; 
+    font-size: 1.2em; 
     text-align: center; 
     text-decoration: none; /* Remove underline */
-    background-color: #cc7676; /* Button background color */
-    border-radius: 5px; /* Rounded corners for button */
-    display: block; /* Make links fill the list item */
-    transition: background-color 0.3s, color 0.3s, font-size 0.3s, border 0.3s; /* Smooth transitions */
+    background-color: #cc7676; 
+    border-radius: 5px; 
+    display: block; 
+    transition: background-color 0.3s, color 0.3s, font-size 0.3s, border 0.3s; 
     border: 2px solid transparent; /* Border for button effect */
 }
 
@@ -205,9 +205,9 @@ figcaption {
 
     .nav-links a {
         width: 100%; /* Full width for links */
-        text-align: center; /* Center text within buttons */
-        padding: 15px; /* Maintain padding for large screens */
-        font-size: 1.5em; /* Font size for large screens */
+        text-align: center; 
+        padding: 15px; 
+        font-size: 1.5em; 
     }
 }
 /* aside styling */
@@ -215,9 +215,9 @@ figcaption {
     background-color: #457B9D; 
     color: #F1FAEE; 
     padding: 10px; /* Padding for aside */
-    border: 2px solid #F1FAEE; /* Solid border */
-    border-radius: 10px; /* Rounded corners */
-    margin: 10px; /* Space above and below aside */
+    border: 2px solid #F1FAEE; 
+    border-radius: 10px; 
+    margin: 10px; 
 }
 /* formatting for aside in the menu screen for large screens */
 @media (min-width: 750px) {
@@ -225,9 +225,20 @@ figcaption {
         padding: 25px;
     }
 }
+/* column setup for large screens */
+@media (min-width: 750px) {
+    .column-left {
+        width: 40%; /* Left column takes up 35% of the container */
+        float: left; /* Float left */
+        padding: 10px;
+    }
 
-
-
+    .column-right {
+        width: 40%; /* Right column takes up 60% of the container */
+        clear: right; /* clears the properties after this section allowing the footer to return to normal */
+        padding: 10px;
+    }
+}
 
 
 
