@@ -25,7 +25,7 @@ header {
     color: #F1FAEE;
 }
 /* defines rules for large screens */
-@media (min-width: 769px) {
+@media (min-width: 750px) {
     header {
         background-image: url('../images/LogoLarge.png'); 
         min-height: 100px;
@@ -136,16 +136,46 @@ figcaption {
     padding: 20px;
     border-radius: 10px; 
 }
-/* Basic styling for navigation links */
-.nav-links a {
-    color: #222c85;
-    padding: 10px;
-    font-size: 1.5em;
+/* Navigation links */
+.nav-links {
+    background-color: #f2f2f2;
+    padding: 10px; /* Padding around the navigation */
+    margin-top: 20px; /* Space above the navigation area */
 }
-/* Hover state */
+
+.nav-links ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox for horizontal navigation */
+    justify-content: space-between; /* Space links evenly */
+    align-items: center; /* Center items vertically */
+}
+
+.nav-links li {
+    flex: 1; /* Allow links to grow and shrink evenly */
+    margin: 0 5px; /* Space between list items */
+}
+
+.nav-links a {
+    color: #ffffff; 
+    padding: 10px 0; /* Button-like padding (top/bottom only for vertical centering) */
+    font-size: 1.2em; /* Base font size */
+    text-align: center; 
+    text-decoration: none; /* Remove underline */
+    background-color: #cc7676; /* Button background color */
+    border-radius: 5px; /* Rounded corners for button */
+    display: block; /* Make links fill the list item */
+    transition: background-color 0.3s, color 0.3s, font-size 0.3s, border 0.3s; /* Smooth transitions */
+    border: 2px solid transparent; /* Border for button effect */
+}
+
+/* Hover effect */
 .nav-links a:hover {
-    color: #e74c3c; 
-    font-size: 2.0em;
+    color: #ffffff; 
+    background-color: #e74c3c; /* Change background color on hover */
+    font-size: 1.3em; /* Slightly increase font size on hover */
+    border: 2px solid #7a2414; /* Border color on hover */
 }
 
 /* Visited links */
@@ -153,7 +183,51 @@ figcaption {
     color: #9b59b6; 
 }
 
-/* Active link (when selected) */
+/* Active link */
 .nav-links a:active {
     color: #2ecc71; 
 }
+
+/* Large screen styles */
+@media (min-width: 750px) {
+    .nav-links {
+        margin-top: 40px; /* Space above navigation */
+    }
+
+    .nav-links ul {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Vertical spacing between items */
+    }
+
+    .nav-links a {
+        width: 100%; /* Full width for links */
+        text-align: center; /* Center text within buttons */
+        padding: 15px; /* Maintain padding for large screens */
+        font-size: 1.5em; /* Font size for large screens */
+    }
+}
+/* aside styling */
+.menu-aside {
+    background-color: #457B9D; 
+    color: #F1FAEE; 
+    padding: 10px; /* Padding for aside */
+    border: 2px solid #F1FAEE; /* Solid border */
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px; /* Space above and below aside */
+}
+/* formatting for aside in the menu screen for large screens */
+@media (min-width: 750px) {
+    .menu-aside {
+        padding: 25px;
+    }
+}
+
+
+
+
+
+
+
