@@ -169,6 +169,7 @@ figcaption {
         clear: right; /* clears the properties after this section allowing the footer to return to normal */
         padding: 10px;
     }
+    /* Stack links vertically on larger screens */
     .navcontainer {
         flex-direction: column; /* Stack links vertically on larger screens */
         height: 100vh;
@@ -191,13 +192,16 @@ figcaption {
         color: #F1FAEE;
         font-family: 'Times New Roman', Times, serif;
     }
+    /* allows main section to be scrolled through */
     .navcontainer main {
         height: 100vh;
         overflow: scroll;
     } 
+    /* sets the nav and main to be in flex */
     .container {
         display: flex;
     }
+    /* Spaces out buttons */
     .navcontainer a{
         margin-top: 12.5%;
         margin-bottom: 12.5%;
