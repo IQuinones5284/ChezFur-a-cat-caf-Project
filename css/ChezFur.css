@@ -6,14 +6,7 @@ body {
 main {
     background-color: #145;
     color: gainsboro;
-}
-@media screen and (min-width: 750px){
-    body {
-        background-color: #457B9D;
-        color: #F1FAEE;
-        font-family: 'Times New Roman', Times, serif;
-    }
-
+    flex: 1;
 }
 /* this is the new code added for formatting the header with the logos */
 header {
@@ -24,21 +17,13 @@ header {
     background-color: #E63946;
     color: #F1FAEE;
 }
-/* defines rules for large screens */
-@media (min-width: 750px) {
-    header {
-        background-image: url('../images/LogoLarge.png'); 
-        min-height: 100px;
-        background-color: #E63; 
-    }
-}
 /* adds rules for the hero images of each page */
 .hero-image {
     width: 100%;          
     height: auto;     
     max-width: 100%;     
     display: block;
-}   
+} 
 a {
  color: #1D3557;
 }  
@@ -81,13 +66,12 @@ dt {
 dd {
     font-style: italic; 
 }
-/* Container that holds all the cat images and captions mainly for the hosts page */
+/* Container that holds all the cat images and captions mainly for the hosts page Update for Flexbox assignment*/
 .cat-gallery {
     display: flex; 
     flex-wrap: wrap; 
-    justify-content: center; 
+    justify-content: space-around;
     gap: 20px; 
-    background-color: #da9655; /* Set the background color */
     width: 90%; /* Set the width to 90% */
     margin: 0 auto; /* Center the section */
     border-radius: 10px; /* Add 10px border-radius */
@@ -110,13 +94,11 @@ figcaption {
     font-weight: bold;
     margin-top: 8px; 
 }
-/* defines rules for the cat images on larger screens for the hosts page */
-@media screen and (min-width: 750px) {
-    .cat-image {
-        width: 180px; 
-        height: 180px; 
-    }
+/* new class to seperate the background from new flexbox */
+.cat-background {
+    background-color: #da9655;
 }
+
 .menu-heading-1 {
     font-family: 'Brush Script MT', cursive;
     text-align: center;
@@ -138,77 +120,32 @@ figcaption {
     border-radius: 10px; 
 }
 /* Navigation links */
-.nav-links {
-    background-color: #f2f2f2;
-    padding: 10px; /* Padding around the navigation */
-    margin-top: 20px; /* Space above the navigation area */
+/* General nav container styles */
+.navcontainer {
+    display: flex; /* Enable flexbox */
+    flex-direction: row; /* Default to horizontal layout for small screens */
 }
 
-.nav-links ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0;
-    margin: 0;
-    display: flex; /* Flexbox for horizontal navigation */
-    justify-content: space-between; /* Space links evenly */
-    align-items: center; 
-}
-
-.nav-links li {
-    flex: 1; /* Allow links to grow and shrink evenly */
-    margin: 0 5px; /* Space between list items */
-}
-
-.nav-links a {
-    color: #ffffff; 
+/* Styles for the navigation links */
+.navcontainer a {
+    margin: 0 5px; /* Space between links */
+    text-align: center; 
     padding: 10px 0; 
     font-size: 1.2em; 
-    text-align: center; 
     text-decoration: none; /* Remove underline */
     background-color: #cc7676; 
     border-radius: 5px; 
-    display: block; 
     transition: background-color 0.3s, color 0.3s, font-size 0.3s, border 0.3s; 
     border: 2px solid transparent; /* Border for button effect */
 }
 
 /* Hover effect */
-.nav-links a:hover {
-    color: #ffffff; 
+.navcontainer a:hover {
     background-color: #e74c3c; /* Change background color on hover */
-    font-size: 1.3em; /* Slightly increase font size on hover */
-    border: 2px solid #7a2414; /* Border color on hover */
 }
-
-/* Visited links */
-.nav-links a:visited {
-    color: #9b59b6; 
-}
-
 /* Active link */
-.nav-links a:active {
+.navcontainer a:active {
     color: #2ecc71; 
-}
-
-/* Large screen styles */
-@media (min-width: 750px) {
-    .nav-links {
-        margin-top: 40px; /* Space above navigation */
-    }
-
-    .nav-links ul {
-        flex-direction: column; /* Stack items vertically */
-    }
-
-    .nav-links li {
-        margin: 10px 0; /* Vertical spacing between items */
-    }
-
-    .nav-links a {
-        width: 100%; /* Full width for links */
-        text-align: center; 
-        padding: 15px; 
-        font-size: 1.5em; 
-    }
 }
 /* aside styling */
 .menu-aside {
@@ -219,13 +156,7 @@ figcaption {
     border-radius: 10px; 
     margin: 10px; 
 }
-/* formatting for aside in the menu screen for large screens */
-@media (min-width: 750px) {
-    .menu-aside {
-        padding: 25px;
-    }
-}
-/* column setup for large screens */
+/* media rules for large screens */
 @media (min-width: 750px) {
     .column-left {
         width: 40%; /* Left column takes up 35% of the container */
@@ -238,8 +169,46 @@ figcaption {
         clear: right; /* clears the properties after this section allowing the footer to return to normal */
         padding: 10px;
     }
+    .navcontainer {
+        flex-direction: column; /* Stack links vertically on larger screens */
+        height: 100vh;
+    }
+
+    .menu-aside {
+        padding: 25px;
+    }
+    .cat-image {
+        width: 180px; 
+        height: 180px; 
+    }
+    header {
+        background-image: url('../images/LogoLarge.png'); 
+        min-height: 100px;
+        background-color: #E63; 
+    }
+    body {
+        background-color: #457B9D;
+        color: #F1FAEE;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .navcontainer main {
+        height: 100vh;
+        overflow: scroll;
+    } 
+    .container {
+        display: flex;
+    }
+    .navcontainer a{
+        margin-top: 12.5%;
+        margin-bottom: 12.5%;
+    }
 }
-
-
-
-
+/* added to control the background color of the sponsor section for the hosts page */
+.sponsor {
+    background-color: #f1f5f5;
+}
+@media (max-width: 749px) {
+    .navcontainer a{
+        flex: 1;
+    }
+}
