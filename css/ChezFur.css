@@ -156,10 +156,12 @@ figcaption {
     border-radius: 10px; 
     margin: 10px; 
 }
+   /* sets grid view for the cat images in adoptions */
 .gridContainer {
     display: grid;
     padding-right: 2.5em;
 }
+   /* responsive styling for the cat images */
 .gridContainer img{
     width: 100%;
     height: auto;
@@ -167,10 +169,6 @@ figcaption {
     margin: 20px; 
     overflow: hidden;
 
-}
-.gridCat {
-    width: 100%;
-    height: auto;
 }
 /* media rules for large screens */
 @media (min-width: 750px) {
@@ -222,15 +220,18 @@ figcaption {
         margin-top: 12.5%;
         margin-bottom: 12.5%;
     }
+       /* control for columns in large screens */
     .gridContainer {
         grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */ 
         gap: 16px;
         margin: 20px; 
         padding-right: 35px;
     }
+       /* Makes wide image take up two grid spaces */
     .wideCat{
         grid-column: span 2;
     }
+       /* Makes long image take up two spaces */
     .longCat{
         grid-row: span 2;
     }
