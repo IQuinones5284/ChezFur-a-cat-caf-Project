@@ -27,9 +27,45 @@
         <main>
              <!-- Hero Image 4 -->
              <img src="../images/ContactCat.jpg" alt="A grey cat with blue eyes" class="hero-image">
-            <h1>This is the contact page</h1>
-            <p>body 1</p>
+            <h1>Let us know how to contact you with the answers you need</h1>
+            <p>This is how to leave us a message so that we can answer any of the questions you may have and call you back at a convenient time!</p>
             <p>body 2</p>
+             <!-- Contact Form Starts Here -->
+             <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+                <!-- Name Field -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+
+                <!-- Email Field -->
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                <br><br>
+
+                <!-- Phone Field -->
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="\d{3}-\d{3}-\d{4}" placeholder="999-999-9999" required>
+                <small>Format: 999-999-9999</small>
+                <br><br>
+
+                <!-- Preferred Contact Dropdown -->
+                <label for="contact">Preferred Contact:</label>
+                <select id="contact" name="contact" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="email">Email</option>
+                    <option value="phone">Phone me between 1pm-4pm</option>
+                    <option value="text">Phone me between 6pm-9pm</option>
+                </select>
+                <br><br>
+                <!-- Question or concern sub -->
+                <label for="Question or Concern?"> Question or Concern?</label>
+                <input type="text" id="question or concern" name="question or concern" required>
+                <br><br>
+                <!-- Submit Button -->
+                <input type="submit" value="Submit">
+            </form>
+            <!-- Contact Form Ends Here -->
+
             <h3>Chez Fur by Isaiah Quinones</h3>
             <h4> 
              612 Tiger Trail   <br>
