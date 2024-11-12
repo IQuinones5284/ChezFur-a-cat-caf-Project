@@ -8,7 +8,7 @@
         <!-- Links this file to external css file to be styled -->
         <link rel="stylesheet" href="./css/ChezFur.css">
     </head>
-    <body>
+    <body onload="showWelcomeMessage()">   <!-- causes welcome message to appear on load -->
         <header>
             <h1>Chez Fur</h1>
             <h2>By Isaiah Quinones</h2>
@@ -39,8 +39,14 @@
         </main>
     </div>
         <footer>
-            Copyright <br>
-            <a href="mailto:cat.resturant@gmail.com"> Email us with a question</a> <!-- links to user email with webpage email -->
+            <p>Copyright</p>
+            <a href="mailto:cat.resturant@gmail.com"> Email us with a question</a>
+            <p id="current-date"></p> <!-- Placeholder for the date -->
+            <script>
+            document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+            </script>
         </footer>
+        <!-- Link to the external JavaScript file -->
+    <script src="./scripts/welcome.js"></script>
     </body>
 </html>
