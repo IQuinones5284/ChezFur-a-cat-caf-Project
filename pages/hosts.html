@@ -79,8 +79,12 @@
         </main>
     </div>
         <footer>
-            Copyright <br>
+            <p>Copyright</p>
             <a href="mailto:cat.resturant@gmail.com"> Email us with a question</a>
+            <p id="current-date"></p> <!-- Placeholder for the date -->
+            <script>
+            document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+            </script>
         </footer>
     </body>
 </html>

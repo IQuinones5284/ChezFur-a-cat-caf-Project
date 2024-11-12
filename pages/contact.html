@@ -29,9 +29,8 @@
              <img src="../images/ContactCat.jpg" alt="A grey cat with blue eyes" class="hero-image">
             <h1>Let us know how to contact you with the answers you need</h1>
             <p>This is how to leave us a message so that we can answer any of the questions you may have and call you back at a convenient time!</p>
-            <p>body 2</p>
              <!-- Contact Form Starts Here -->
-             <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+             <form class="contactform" action="https://webdevbasics.net/scripts/demo.php" method="post">
                 <!-- Name Field -->
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -75,8 +74,12 @@
         </main>
     </div>
         <footer>
-            Copyright <br>
+            <p>Copyright</p>
             <a href="mailto:cat.resturant@gmail.com"> Email us with a question</a>
+            <p id="current-date"></p> <!-- Placeholder for the date -->
+            <script>
+            document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+            </script>
         </footer>
     </body>
 </html>
